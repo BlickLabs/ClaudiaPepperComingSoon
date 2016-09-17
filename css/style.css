@@ -446,6 +446,11 @@ input.input__field.notify-input-box:-ms-input-placeholder {
   float: none;
 }
 
+.social-icons .fa,
+.copyright p {
+  color: white;
+}
+
 .table {
   display: table; }
 
