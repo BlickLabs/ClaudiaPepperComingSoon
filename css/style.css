@@ -152,7 +152,7 @@ p, .address-detail a {
   position: relative; }
 
 .side-left {
-  background: #fff;
+  background: #000;
   padding-top: 11%; }
   .side-left .small-hr {
     margin-top: 17px;
@@ -331,23 +331,119 @@ p.tagline .tagtext {
   -ms-box-shadow: 0 0 0 4px #000 inset;
   -moz-box-shadow: 0 0 0 4px #000 inset; }
 
+span.small-hr {
+  background-color: white;
+}
+
 .notify-btn {
   padding-top: 50px;
   padding-bottom: 10px;
   width: auto;
 }
 
+.preloader {
+  background: black;
+}
+
 .btn {
+  background: white !important;
+  border-color: white !important;
+  border-width: 3px !important;
+  color: black !important;
+  height: 44px !important;
   min-width: 143px;
   width: auto !important;
+  transition: background 0.3s;
+}
+
+.btn span.arrow {
+  border-color: transparent transparent transparent black;
+}
+
+.btn span.arrow::after {
+  background: black none repeat scroll 0 0;
+}
+
+a.btn:hover,
+button.btn:hover {
+  color: white !important;
+  border-color: white !important;
+}
+
+.btn:hover span.arrow {
+  border-color: transparent transparent transparent white;
+}
+
+.btn:hover span.arrow::after {
+  background: white none repeat scroll 0 0;
 }
 
 .btn-submit {
   min-width: 57px;
 }
 
+a.close-notify .top,
+a.close-notify .bottom,
+a.close-notify .left,
+a.close-notify .right {
+  background: white;
+}
+
+a.close-notify i {
+  color: white;
+}
+
 .wellcome-text {
+  color: white;
   font-size: 20px;
+  text-transform: none;
+}
+
+.type-wrap h1 {
+  color: white;
+}
+
+input.input__field.notify-input-box {
+  color: white;
+  margin-top: 10px;
+}
+
+input.input__field.notify-input-box::-webkit-input-placeholder {
+   color: white;
+}
+
+input.input__field.notify-input-box:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+input.input__field.notify-input-box::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+input.input__field.notify-input-box:-ms-input-placeholder {  
+   color: white;  
+}
+
+.input-wrap:not(.input--filled) label::after,
+.input-wrap:not(.input--filled) label::before {
+  border-bottom: 4px solid white !important;
+}
+
+.input-wrap.input--filled label::after {
+  border-bottom: 8px solid white !important;
+}
+
+.input-wrap.input--filled label::before {
+  border-bottom: 4px solid white !important;
+}
+
+.notify-wrap button.btn {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.notify-wrap button.btn span {
+  float: none;
 }
 
 .table {
