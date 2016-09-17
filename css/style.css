@@ -20,7 +20,7 @@ Project:	Pogody
 /****************************/
 /** Reset **/
 /****************************/
-html, body, div, span, applet, object, iframe, h1, h3, .side-right #countdown span,
+html, body, div, span, applet, object, iframe, h1, h3, .side-right #countdown span.days,
 .side-right #countdown li.seperator, h2, h3, h4, h5, h6, p, .address-detail a, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@ a:focus {
   text-decoration: none;
   outline: none; }
 
-h1, h3, .side-right #countdown span,
+h1, h3, .side-right #countdown span.days,
 .side-right #countdown li.seperator {
   color: #000;
   font-size: 80px;
@@ -164,6 +164,9 @@ p, .address-detail a {
 
 .preloader {
   background: #fff; }
+p.tagline {
+  color: white;
+}
 
 p.tagline, .address-detail a.tagline {
   font-size: 30px;
@@ -182,9 +185,9 @@ p.tagline, .address-detail a.tagline {
     padding-top: 28px; }
   .side-right .counter-content {
     padding-top: 35%; }
-  .side-right #countdown span,
+  .side-right #countdown span.days,
   .side-right #countdown li.seperator {
-    color: #ff239b;
+    color: #010101;
     line-height: 97px; }
   .side-right .trans-overlay-dark {
     background: #fff;
@@ -193,6 +196,26 @@ p.tagline, .address-detail a.tagline {
     position: absolute;
     left: 0;
     z-index: -2; }
+
+#countdown {
+  display: inline-block;
+  width: auto;
+}
+
+#countdown span.days {
+  display: block;
+  border-color: white !important;
+  border-style: solid !important;
+  border-width: 0 0 4px 0 !important;
+  color: white !important;
+  padding: 0 16px;
+  text-align: center;
+}
+
+#countdown span.remain-days {
+  display: block;
+  text-align: center;
+}
 
 .align-center, .address-detail {
   overflow: hidden;
@@ -205,7 +228,7 @@ p.tagline, .address-detail a.tagline {
   padding-bottom: 40px; }
 
 .small-hr {
-  background: #ff239b none repeat scroll 0 0;
+  background: #111 none repeat scroll 0 0;
   display: block;
   height: 4px;
   width: 32px; }
@@ -414,15 +437,15 @@ p.tagline, .address-detail a.tagline {
   color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-color: #ff239b;
+  border-color: #111;
   border-radius: 0;
   height: 57px;
   width: 203px;
-  background: #ff239b; }
+  background: #111; }
   .btn:hover, .btn:focus, .btn:active {
-    background: #ff239b !important;
+    background: #111 !important;
     color: #fff;
-    border-color: #ff239b !important;
+    border-color: #111 !important;
     outline: none; }
     .btn:hover .arrow:after, .btn:focus .arrow:after, .btn:active .arrow:after {
       width: 20px; }
@@ -505,9 +528,9 @@ p.tagline, .address-detail a.tagline {
   width: 441px; }
 .notify-wrap .input__label--hoshi::before,
 .notify-wrap .input__label--hoshi::after {
-  border-bottom: 4px solid #ff239b !important; }
+  border-bottom: 4px solid #111 !important; }
 .notify-wrap .input__label--hoshi::after {
-  border-bottom: 8px solid #ff239b !important; }
+  border-bottom: 8px solid #111 !important; }
 
 .form-control::-webkit-input-placeholder {
   color: #000;
@@ -740,12 +763,12 @@ p.tagline, .address-detail a.tagline {
     top: 50%;
     text-align: center;
     margin: 0 auto;
-    color: #ff239b;
+    color: #111;
     font-size: 15px;
     transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%); }
   .call-to-action span {
-    background: #ff239b;
+    background: #111;
     position: absolute;
     display: block; }
   .call-to-action .top {
@@ -854,7 +877,7 @@ p.tagline, .address-detail a.tagline {
 /* Mediaqueries */
 /*****************************************************/
 @media only screen and (max-width: 1710px) {
-  h1, h3, .side-right #countdown span,
+  h1, h3, .side-right #countdown span.days,
   .side-right #countdown li.seperator {
     font-size: 65px; }
 
@@ -864,7 +887,7 @@ p.tagline, .address-detail a.tagline {
   .open-right .contact {
     right: 30px; } }
 @media only screen and (max-width: 1530px) {
-  h1, h3, .side-right #countdown span,
+  h1, h3, .side-right #countdown span.days,
   .side-right #countdown li.seperator {
     font-size: 50px; }
 
@@ -874,7 +897,7 @@ p.tagline, .address-detail a.tagline {
   .detail-info {
     padding-top: 8%; }
 
-  .side-right #countdown span, .side-right #countdown li.seperator {
+  .side-right #countdown span.days, .side-right #countdown li.seperator {
     line-height: 59px; }
 
   .btn {
@@ -933,7 +956,7 @@ p.tagline, .address-detail a.tagline {
     .page-right .map .go-arrow {
       border-width: 5px 0 5px 10px; } }
 @media only screen and (max-width: 1082px) {
-  h1, h3, .side-right #countdown span,
+  h1, h3, .side-right #countdown span.days,
   .side-right #countdown li.seperator {
     font-size: 40px; }
 
@@ -981,7 +1004,7 @@ p.tagline, .address-detail a.tagline {
   .open-left .about {
     left: 20px; } }
 @media only screen and (max-width: 870px) {
-  h1, h3, .side-right #countdown span,
+  h1, h3, .side-right #countdown span.days,
   .side-right #countdown li.seperator {
     font-size: 30px; }
 
@@ -1008,7 +1031,7 @@ p.tagline, .address-detail a.tagline {
   .notify-wrap .form-control:-ms-input-placeholder {
     font-size: 12px; } }
 @media only screen and (max-width: 766px) {
-  h1, h3, .side-right #countdown span,
+  h1, h3, .side-right #countdown span.days,
   .side-right #countdown li.seperator {
     font-size: 50px; }
 
@@ -1135,7 +1158,7 @@ p.tagline, .address-detail a.tagline {
   .page-right .icon {
     padding-top: 8px; } }
 @media only screen and (max-width: 414px) {
-  h1, h3, .side-right #countdown span,
+  h1, h3, .side-right #countdown span.days,
   .side-right #countdown li.seperator {
     font-size: 35px; } }
 
