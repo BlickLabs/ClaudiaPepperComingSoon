@@ -175,7 +175,8 @@ p.tagline, .address-detail a.tagline {
   letter-spacing: -1px; }
 
 .side-right {
-  background: transparent url("../img/background.jpg");
+  background: rgba(0, 0, 0, 0.2) url("../img/background.jpg");
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -200,6 +201,19 @@ p.tagline, .address-detail a.tagline {
 #countdown {
   display: inline-block;
   width: auto;
+}
+
+p.tagline span {
+  display: block;
+}
+
+p.tagline .tagname {
+  font-size: 1.5em;
+}
+
+p.tagline .tagtext {
+  line-height: 1.3;
+  margin-top: 10px;
 }
 
 #countdown span.days {
@@ -239,7 +253,7 @@ p.tagline, .address-detail a.tagline {
   background-repeat: no-repeat; }
 
 .page-left .page-inner {
-  background: transparent url("../img/leftbg.jpg"); }
+  background: rgba(0, 0, 0, 0.) url("../img/leftbg.jpg"); }
   .page-left .page-inner .small-hr {
     margin-top: 9px;
     margin-bottom: 23px; }
@@ -265,7 +279,7 @@ p.tagline, .address-detail a.tagline {
 
 .page-right .page-inner {
   padding-bottom: 100px;
-  background: transparent url("../img/rightbg.jpg"); }
+  background: transparent url("../img/rightbg.jpg");}
   .page-right .page-inner .trans-overlay-dark-contact {
     background: #fff;
     /* The Fallback */
@@ -319,7 +333,22 @@ p.tagline, .address-detail a.tagline {
 
 .notify-btn {
   padding-top: 50px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  width: auto;
+}
+
+.btn {
+  min-width: 143px;
+  width: auto !important;
+}
+
+.btn-submit {
+  min-width: 57px;
+}
+
+.wellcome-text {
+  font-size: 20px;
+}
 
 .table {
   display: table; }
