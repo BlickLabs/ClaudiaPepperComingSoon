@@ -14,17 +14,16 @@ app.controller('NotifyController', function ($scope, $http) {
             $http({
                 method  : 'POST',
                 url     : 'notify-me.php',
-                data    : $.param($scope.formData),  //param method from jQuery
+                data    : $('[name="' + notifyform.$name + '"]').serialize(),  //param method from jQuery
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
             }).success(function(data){
                 console.log(data);
                 if (data.success) { //success comes from the return json object
                     $scope.submitButtonDisabled = false;
-		$scope.formData = null;
+		            $scope.formData = null;
                     $scope.resultMessage = data.message;
                     $scope.result='bg-success';
                 } else {
-					//alert();
                     $scope.submitButtonDisabled = false;
 					$scope.resultMessage = data.message;
                     $scope.result='bg-danger';
@@ -32,7 +31,7 @@ app.controller('NotifyController', function ($scope, $http) {
             });
         } else {
             $scope.submitButtonDisabled = false;
-            $scope.resultMessage = 'Failed :( Please fill out all the fields.';
+            $scope.resultMessage = 'Ingresa una dirección de correo válida.';
             $scope.result='bg-danger';
         }
     }

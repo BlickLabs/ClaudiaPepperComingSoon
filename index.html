@@ -81,9 +81,9 @@
 								<div class="notify-wrap">
 									<div data-ng-controller="NotifyController">
 									<h3 class="wellcome-text" data-animation="fadeInLeft" data-animation-delay="900" data-out-animation="fadeOutLeft" data-out-animation-delay="100">Regístrate y obtén 10% de descuento en tu primer compra</h3>
-									<form id="notifyMe" data-ng-submit="submit(notifyform, $event)"  name="notifyform"    class="contact-form" action="notify-me.php" method="post">
+									<form id="notifyMe" data-ng-submit="submit(notifyform, $event)"  name="notifyform"    class="contact-form" action="notify-me.php" method="post" novalidate>
 										<div class="input-wrap" data-animation="fadeInLeft" data-animation-delay="100" data-out-animation="fadeOutLeft" data-out-animation-delay="900">
-											<input  data-ng-model="formData.inputEmail" type="email" class="col-lg-10  align-center form-control input input__field input__field--hoshi notify-input-box" name="email" placeholder="email"  type="email">
+											<input  data-ng-model="formData.inputEmail" type="email" class="col-lg-10  align-center form-control input input__field input__field--hoshi notify-input-box" name="email" placeholder="email" ng-required="true" type="email">
 											<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
 										</div>	
 										<button type="submit" data-hover="Send" class="btn btn-default progress-button btn-submit " data-animation="fadeInUp" data-animation-delay="900" data-out-animation="fadeOutUp" data-out-animation-delay="1300">

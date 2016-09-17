@@ -446,6 +446,10 @@ input.input__field.notify-input-box:-ms-input-placeholder {
   float: none;
 }
 
+#notifyMe + p.ng-binding {
+  color: white;
+}
+
 .social-icons .fa,
 .copyright p {
   color: white;
