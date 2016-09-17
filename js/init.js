@@ -129,17 +129,6 @@ function pogody(){
 		// defaults to false for infinite loop
 		loopCount: false
 	});
-	/*Typed js for title tag*/
-	$("#title").typed({
-		strings: ["Hello..!", "Welcome..!", "Enjoy..!"],
-		typeSpeed: 300,
-		backDelay: 900,
-		loop: true,
-		cursorChar: "|",
-		contentType: 'html', // or text
-		// defaults to false for infinite loop
-		loopCount: false
-	});
 	
 	/*click function*/
 	var target = $('#splitlayout');
