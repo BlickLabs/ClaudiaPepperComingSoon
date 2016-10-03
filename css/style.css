@@ -1182,7 +1182,11 @@ input.input__field.notify-input-box:-ms-input-placeholder {
       padding-top: 80px;
       padding-bottom: 47px; }
       .side.side-left .copyright {
-        display: none; }
+        margin-top: 20px; }
+
+  p.tagline .tagname {
+    font-size: 1.4em;
+  }
 
   #message {
     font-size: 12px;
